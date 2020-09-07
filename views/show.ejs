@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Registros</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: rgba(119, 33, 216, 0.61);
+            font-family: 'Grandstander', cursive;
+            width: 300px;
+            margin: 10px;
+            font-size: 20px;
+        }
+        h2{
+            margin: 5px;
+        }
+        .tb{
+            width: 300px;
+            margin: 10px;
+            font-size: 20px;
+            background-color:rgba(255, 255, 255, 0.781) ;
+        }
+    </style>
+</head>
+<body>
+    <h2>Registros<h2>
+        <table class="tb" border="1"  >
+            <thead>
+                <tr>
+                    <th >NOME</th>
+                    <th >SOBRENOME</th>
+                    <th >SEXO</th>
+                    <th >CPF</th>
+                    <th >EMAIL</th>
+                    <th >TELEFONE</th>
+                    <th >CEP</th>
+                    <th >FUNÇÕES</th>
+                </tr>
+            </thead>
+            <tbody>
+            <% data.forEach(function(details) { %>
+            <tr>
+               <td><%= details.name %></td>
+               <td><%= details.surname %></td>
+               <td><%= details.sexo %></td>
+               <td><%= details.cpf %></td>
+               <td><%= details.email %></td>
+               <td><%= details.numero %></td>
+               <td><%= details.cep %></td>
+               <td><a href="/edit/<%= details._id %>">Editar</a> <a href="/delete/<%= details._id %>">Deletar</a></td>
+            </tr>
+            <% }) %>
+            </tbody>
+         </table>
+         <button type="submit" class="btn btn-dark btn-sm"><a href="/">VOLTAR</a></button>
+</body>
+</html>

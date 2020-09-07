@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTRAR</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: rgba(119, 33, 216, 0.61);
+            font-family: 'Grandstander', cursive;
+        }
+        form{
+            width: 290px;
+            margin: 12px;
+            font-size: 15px;  
+        }
+        .baixo{
+            margin: 15px;
+        
+        }
+        h2{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    </header>
+    <h2>Registrar<h2>
+        <div class="form-group">
+            <form action="/show" method="POST" >
+                <label for="Nome">Nome</label>
+                <input type="text" placeholder="Nome" name="name"  class="form-control" >
+                <label for="Sobrenome">Sobrenome</label>
+                <input type="text" placeholder="Sobrenome" name="surname"  class="form-control" >
+                <label for="Sexo">Sexo</label>
+                <input type="text" placeholder="Sexo" name="Sexo"  class="form-control" >
+                <label for="Cpf">Cpf</label>
+                <input type="number" placeholder="Cpf" name="cpf"  class="form-control"  >
+                <label for="Email">Email</label>
+                <input type="email" placeholder="Email" name="email"  class="form-control"  >
+                <label for="Telefone">Telefone</label>
+                <input type="number" placeholder="Telefone" name="telefone"  class="form-control"  >
+                <label for="Cep">Cep</label>
+                <input type="number" placeholder="Cep" name="cep"  class="form-control"  >
+        </div>
+                <div class="baixo">
+                    <button type="submit" class="btn btn-dark btn-sm"><a>LOAD</a></button>
+                    <button type="submit" class="btn btn-dark btn-sm"><a href="/show">REGISTROS</a></button>
+                </div>
+                
+            </form> 
+        
+</body>
+</html>
