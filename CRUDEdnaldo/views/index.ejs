@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>CRUD em Node</title>
+    <style>
+       .Header{
+           background-color: #2E9AFE;
+           color: #fff;
+           padding: 40px;
+       }
+       .Header h2{
+        font-size: 45px;
+       }
+       .Footer{
+           background-color: #000000;
+           padding: 30px;
+           color: #fff;
+           margin-top: 15px;
+       }
+    </style>
+</head>
+<body>
+<div class="container Conteudo">
+    <header class="container Header">
+        <h2 class="text-center">Cadastro de  Usuários</h2>
+        <h3 class="text-center">Preencha os Dados</h3>
+    </header>
+        <form action="/show" method="POST" autocomplete="off">
+        <div class="container"></div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="label1">Nome:</label>
+                    <input class="form-control bg-light shadow" type="text" placeholder="Digite seu nome" name="name" id="label1" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="label2">Sobrenome:</label>
+                    <input class="form-control bg-light shadow" type="text" placeholder="Digite seu sobrenome" name="surname" id="label2" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="label3">Cpf:</label>
+                    <input class="form-control bg-light shadow" type="text" placeholder="Digite seu cpf" name="cpf" id="label3" onkeypress="$(this).mask('000.000.000-00');" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="label4">Telefone:</label>
+                    <input class="form-control bg-light shadow" type="text" placeholder="Digite seu telefone" name="telefone" id="label4" onkeypress="$(this).mask('(00) 0000-00009')"required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="label5">Ano de Nascimento:</label>
+                    <input class="form-control bg-light shadow" type="text" placeholder="Digite seu Nascimento" name="anoNascimento" id="label5" onkeypress="$(this).mask('00/00/0000')" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="label6" >Email:</label>
+                    <input class="form-control bg-light shadow" type="email" placeholder="Informe seu email" name="email" id="label6" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="label7">Nome de Usuário:</label>
+                    <input class="form-control bg-light shadow" type="text" placeholder="Escolha um usuário" name="userName" id="label7" maxlength="10" required>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="label8">Senha:</label>
+                    <input class="form-control bg-light shadow" type="password" placeholder="Defina a senha" name="password" id="label8" required>
+                </div>
+            </div>
+            <button class="btn btn-success shadow" type="submit">Cadastrar</button>
+            <a class="btn btn-primary shadow" href="/show">Usuários Cadastrados</a>
+            <a class="btn btn-danger shadow" href="/">Cancelar</a>
+        </form> 
+    </div>   
+</div>  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

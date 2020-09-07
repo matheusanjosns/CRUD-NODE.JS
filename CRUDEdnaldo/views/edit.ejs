@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>CRUD em Node</title>
+    <style>
+        .Header{
+            background-color: #58ACFA;
+            color: #FBEFEF;
+            padding: 40px;
+        }
+        .divisao{
+            background-color: #D8D8D8;
+        }
+    </style>
+</head>
+<body>
+    <header class="container Header">
+        <h2 class="text-center">Atualizar Registros</h2>
+        <h3 class="text-center">Caso necessite, modifique os Dados</h3>
+    </header>
+    <% data.forEach(function(details) { %>
+        <form action="/edit/<%= details._id %>" method="POST" autocomplete="off">
+            <div class="container divisao">
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label style="color: #610B21;" for="rNome">Nome:</label>
+                        <input class="form-control bg-light shadow" id="rNome"  type="text" value="<%= details.name %>" name="name" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="rSurname">Sobrenome:</label>
+                        <input  class="form-control shadow" id="rSurname" type="text" value="<%= details.surname %>" name="surname" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="rCpf">Cpf:</label>
+                        <input  class="form-control shadow" id="rCpf" type="text" value="<%= details.cpf %>" name="cpf" onkeypress="$(this).mask('000.000.000-00');" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="rTelefone">Telefone:</label>
+                        <input class="form-control shadow" id="rTelefone" type="text" value="<%= details.telefone %>" name="telefone" onkeypress="$(this).mask('(00) 0000-00009')" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="rNascimento">Ano de Nascimento:</label>
+                        <input class="form-control shadow" id="rNascimento type="text" value="<%= details.anoNascimento %>" name="anoNascimento" onkeypress="$(this).mask('00/00/0000')" required>
+                    </div>   
+                    <div class="form-group col-md-4">
+                        <label for="rEmail">Email:</label>
+                        <input  class="form-control shadow" id="rEmail" type="email" value="<%= details.email %>" name="email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group  col-md-6">
+                        <label for="rUser">Nome de Usuário:</label>
+                        <input  class="form-control shadow" id="rUser" type="text" value="<%= details.userName %>" name="userName" maxlength="10" required>
+                    </div>
+                    
+                    <div class="form-group col-md-6">
+                        <label for="rSenha">Senha:</label>
+                        <input  class="form-control shadow" id="rSenha" type="password" value="<%= details.password %>" name="password" required>
+                    </div>
+                </div>
+                <br />
+                <div class="form-row">
+                    <div class="form-group col-md-6">   
+                        <button class="btn btn-success shadow" type="submit" data-toggle="tooltip" data-placement="left" title="Os dados serão atualizados">Atualizar</button>
+                        <a class="btn btn-primary shadow" href="/show">Usuários Cadastrados</a> 
+                        <a class="btn btn-danger shadow" href="/">Cancelar</a>
+                    </div>
+                </div>
+                <br />  
+            </div>    
+        </form>
+    <% }) %>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
