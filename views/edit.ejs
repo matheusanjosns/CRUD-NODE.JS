@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <meta charset="UTF-8">
+   <title>EDITAR</title>
+ 
+</head>
+
+<body>
+    
+    <div class="container-fluid">
+        <table class="table">
+            
+    <div class="jumbotron">
+        <h1 class="display-4">Editar Registro</h1>
+      </div>
+  <% data.forEach(function(details) { %>
+    <form action="/edit/<%= details._id %>" method="POST">
+        <div class="form-group">
+            <label>NOME</label>
+      <input type="text" class="form-control" value="<%= details.name %>" name="name">
+        </div>
+        <div class="form-group">
+            <label>SOBRENOME</label>
+      <input type="text" class="form-control" value="<%= details.surname %>" name="surname">
+        </div>
+      <div class="form-group">
+        <label>IDADE</label>
+      <input type="date" class="form-control" value="<%= details.idade %>" name="idade">
+      </div>
+      <div class="form-group">
+        <label>Rg</label>
+      <input type="number" class="form-control" value="<%= details.rg %>" name="rg">
+      </div>
+      <div class="form-group">
+        <label>E-MAIL</label>
+      <input type="email" class="form-control" value="<%= details.email %>" name="email">
+      </div>
+      <div class="form-group">
+        <label>TELEFONE</label>
+      <input type="tel" class="form-control" value="<%= details.telefone %>" name="telefone">
+      </div>
+      <div class="form-group">
+        <label>ENDEREÇO</label>
+      <input type="text" class="form-control" value="<%= details.endereco %>" name="endereco">
+      </div>
+      <div class="form-group">
+        <label>SEXO</label>
+      <input type="text" class="form-control" value="<%= details.sexo %>" name="sexo">
+      </div>
+      <br />
+      <button><a class="btn btn-primary" href="/show">TODOS OS REGISTROS</a></button>
+      <button type="submit" class="btn btn-danger" >Atualizar</button>
+    </form>
+  <% }) %>
+</table>
+</div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

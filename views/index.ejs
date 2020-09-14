@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <title>Cadastro</title>
+</head>
+<body>
+  <div class="jumbotron">
+    <h1 class="display-4">Olá, seja bem vindo!</h1>
+    <p class="lead">Realize o seu cadastro para a nossa competição.</p>
+    <hr class="my-4">
+    <p>Contamos com a sua presença! </p>
+ 
+  </div>
+  <div class="container-fluid">
+    <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"><h4>Registrar</h4></th>
+              </tr>
+            </thead>
+
+      <table class="table table-bordered">
+    <form action="/show" method="POST">
+      <div class="form-group">
+        <label>NOME</label>
+        <input type="text" class="form-control"  name="name">
+        <small class="form-text text-muted">Digite o seu NOME.</small>
+        </div>
+      <div class="form-group">
+          <label>SOBRENOME</label>
+        <input type="text"  class="form-control" name="surname">
+        <small  class="form-text text-muted">Digite o seu SOBRENOME.</small>
+      </div>
+      <div class="form-group">
+        <label>IDADE</label>
+      <input type="date"  class="form-control" name="idade">
+      <small  class="form-text text-muted">Digite sua IDADE.</small>
+    </div>
+    <div class="form-group">
+      <label>RG</label>
+      <input type="number" class="form-control"  name="rg">
+      <small class="form-text text-muted">Digite seu RG.</small>
+      </div>
+      <div class="form-group">
+        <label>E-MAIL</label>
+        <input type="email" class="form-control"  name="email">
+        <small class="form-text text-muted">Digite seu E-MAIL.</small>
+        </div>
+        <div class="form-group">
+          <label>TELEFONE</label>
+          <input type="tel" class="form-control"  name="telefone">
+          <small class="form-text text-muted">Digite seu TELEFONE.</small>
+          </div>
+          <div class="form-group">
+            <label>ENDEREÇO</label>
+            <input type="text" class="form-control"  name="endereco">
+            <small class="form-text text-muted">Digite o seu ENDEREÇO.</small>
+            </div>
+            <div class="form-group">
+              <label>SEXO</label>
+              <input type="text" class="form-control"  name="sexo">
+              <small class="form-text text-muted">Digite o seu SEXO.</small>
+              </div>
+
+    
+
+      <div>
+        <button type="submit" class="btn btn-outline-primary">Enviar</button>
+        
+        </div>
+    </form> 
+  </table>
+</div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
